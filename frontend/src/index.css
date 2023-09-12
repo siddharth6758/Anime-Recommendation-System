@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Mogra&family=Roboto+Slab:wght@300&display=swap');
+html {
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  background-color: #191919;
+  color:white;
+}
+
+/* Homepage------------------------------------------------------- */
+#navbar-home{
+  width:100vw;
+  height:100px;
+  display:flex;
+  flex-wrap: wrap;
+  align-items:center;
+}
+
+#logo{
+  margin-left: 20px;
+  font-size:30px;
+  font-weight:bold;
+  font-family: 'Mogra', cursive;
+}
+
+#nav-items{
+  margin-left: auto;
+  display:flex;
+  gap:20px;
+  font-size:20px;
+}
+.nav-item a{
+  margin-right:60px;
+  text-decoration:none;
+  color:white;
+  transition-duration: 0.3s;
+}
+
+.nav-item a:hover{
+  color:red;
+}
+#title-home{
+  text-align:center;
+  font-size: 50px;
+  font-weight:bold;
+}
+#select{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.select-item{
+  margin: 40px;
+  padding:10px;
+  text-align: center;
+  width:200px;
+  height: 50px;
+  border:2px solid white;
+  border-radius: 5px;
+  overflow: hidden;
+  transition-duration: 0.5s;
+}
+.select-item:hover{
+  width: 250px;
+  height:250px;
+  color:red;
+}
+.select-item a{
+  text-decoration: none;
+  color:white;
+  font-size:20px;
+}
+#about{
+  font-size: 23px;
+  width: 90%;
+  margin:auto;
+  padding: 20px;
+  text-align: center;
+  color:white;
+}
+#contact{
+  font-size: 23px;
+  width: 90%;
+  margin:25px auto;
+  padding: 10px;
+  text-align: center;
+  color:white;
+}
+#contact-ids{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content:center;
+  gap:20px;
+}
+.contact_btn{
+  font-size:28px;
+  border:none;
+  background-color: #191919;
+  color:white;
+  cursor:pointer;
+  transition-duration: 0.3s;
+}
+.contact_btn:hover{
+  transform: translateY(-15px);
+}
+.mail_btn{
+  font-size:22px;
+  border-color: white;
+  border-radius: 10px;
+  background-color: transparent;
+  transition-duration: 0.3s;
+}
+.mail_btn a{
+  text-decoration:none;
+  color:white;
+  transition-duration: 0.3s;
+}
+
+.mail_btn a:hover, .mail_btn:hover{
+  color:red;
+  border-color: red;
+  background-color: aliceblue;
+}
+
+/*Usersearch ---------------------------------------------------------*/
+#genre-select{
+  width: 75%;
+  display: block;
+  margin: 20px auto ;
+  text-align: center;
+  font-family: "Helvetica Neue",Helvetica,Arial;
+}
+.genrebutton{
+  margin:4px;
+  padding:15px;
+  font-size: 18px;
+  border-radius: 15px;
+  cursor:pointer;
+  font-family:'Courier New',
+  monospace;
+  font-weight: bold;
+  transition-duration: 0.2s;
+  border: none;
+}
+#form-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 50px auto;
+  width:75%;
+}
+.form-item{
+  width:50%;
+  margin: auto;
+  text-align: center;
+  font-family: "Helvetica Neue",Helvetica,Arial;
+}
+.form-item input[type="text"]{
+  width:20vw;
+  height: 7.8vh;
+  border-radius: 15px;
+  border:none;
+  font-size:20px;
+}
+#select-type{
+  width: 20vw;
+  height: 7.8vh;
+  border-radius: 15px;
+  border:none;
+  font-size:20px;
+}
+#select-type:focus{
+  outline:none;
+}
+.form-item input[type="text"]:focus{
+  outline:none;
+}
+.genrebutton:hover{
+  background-color:#858484;
+  color:#ebe9e9;
+}
+.active{
+  background-color:#d40b0b;
+  color:#ebe9e9;
+}
+/*namesearch ---------------------------------------------------------*/
+#search-form{
+  display:block;
+  width:50%;
+  text-align: center;
+  margin:7.8vh auto;
+}
+#search-anime{
+  width:43vw;
+  height:7.8vh;
+  border:none;
+  border-radius: 15px;
+  font-size: 18px;
+}
+#search-anime:focus{
+  outline:none;
+}
+#name-search{
+  background:url('./public/itachi.jpg');
+  height:100vh;
+  background-repeat: no-repeat;
+  background-position: 50% 80%;
+  /* background-size: cover; */
+  overflow-y: hidden;
+}
+.form-item-search{
+  font-family: "Helvetica Neue",Helvetica,Arial;
+  margin-top: 20px;
+}
+
+/*findanime ---------------------------------------------------------*/
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
