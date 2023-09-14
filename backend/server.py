@@ -14,8 +14,8 @@ genre_list = ['Action', 'Adventure', 'Cars', 'Comedy', 'Dementia', 'Demons', 'Dr
 @app.route('/findanime', methods=['POST'])
 def animefind():
     data = request.data
-    print('userdata:',data)
-    response = {'status':'OK'}
+    respdata = data.decode('utf-8')
+    response = {'status':'OK','userdata':respdata} #response status + anime data
     return jsonify(response)
 
 

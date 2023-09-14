@@ -35,7 +35,7 @@ function UserSearch() {
       useravgrat:useravgrat
     }).then((response)=>{
       if (response.data['status']==='OK'){
-        navigate('/findanime',{state:response.status})
+        navigate('/findanime',{ state : response.data['userdata'] })
       }
     }).catch((error)=>{
       console.log(error)
@@ -57,7 +57,7 @@ function UserSearch() {
 
   return (
     <div className="body">
-      <form method="post" action='/findanime'>
+      <form method="POST">
         <div id='genre-select'>
           <h1>Select Genre</h1>
             {genre_list.map((value,idx)=>(
