@@ -1,12 +1,11 @@
 import '../index.css';
 import React from 'react';
-// import { useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 function FindAnime() {
   
-  // const location = useLocation();
-  // const userdata = location.state
-  // console.log(userdata)
+  const location = useLocation();
+  const userdata = location.state
   
 
 
@@ -20,7 +19,7 @@ function FindAnime() {
 
   return (
     <div className="body">
-      Hello findanime
+      Hello findanime {userdata}
     </div>
   );
 }

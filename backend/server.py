@@ -15,6 +15,8 @@ genre_list = ['Action', 'Adventure', 'Cars', 'Comedy', 'Dementia', 'Demons', 'Dr
 def animefind():
     data = request.data
     print('userdata:',data)
+    response = {'status':'OK'}
+    return jsonify(response)
 
 
 if __name__ == '__main__':

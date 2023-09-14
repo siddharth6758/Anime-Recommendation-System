@@ -1,6 +1,6 @@
 import '../index.css';
 import React,{ useState } from 'react';
-// import { useNavigate} from 'react-router-dom';
+import { useNavigate} from 'react-router-dom';
 import axios from 'axios';
 
 function UserSearch() {
@@ -8,7 +8,7 @@ function UserSearch() {
   const genre_list = ['Action', 'Adventure', 'Cars', 'Comedy', 'Dementia', 'Demons', 'Drama', 'Ecchi', 'Fantasy', 'Game', 'Harem', 'Hentai', 'Historical', 'Horror', 'Josei', 'Kids', 'Magic', 'Martial Arts', 'Mecha', 'Military', 'Music', 'Mystery', 'Parody', 'Police', 'Psychological', 'Romance', 'Samurai', 'School', 'Sci-Fi', 'Seinen', 'Shoujo', 'Shoujo Ai', 'Shounen', 'Shounen Ai', 'Slice of Life', 'Space', 'Sports', 'Super Power', 'Supernatural', 'Thriller', 'Vampire', 'Yaoi', 'Yuri']
 
   const [ genre, setGenre ] = useState([])
-  // const navigate = useNavigate()
+  const navigate = useNavigate()
 
   const selectgenre = (sel_val)=>{
       if (!genre.includes(sel_val)){
@@ -27,7 +27,6 @@ function UserSearch() {
 // put axios and set success status, if success then navigate 
 
   const sendUserData = (genre,type,episodes,avgrat,useravgrat) => {
-    // navigate('/findanime',{state:{genre,type,episodes,avgrat,useravgrat}})
     axios.post('http://127.0.0.1:5000/findanime',{
       genre:genre,
       type:type,
@@ -35,7 +34,9 @@ function UserSearch() {
       avgrat:avgrat,
       useravgrat:useravgrat
     }).then((response)=>{
-      console.log('response bro:',response.status)
+      if (response.data['status']==='OK'){
+        navigate('/findanime',{state:response.status})
+      }
     }).catch((error)=>{
       console.log(error)
     })
