@@ -24,16 +24,15 @@ function UserSearch() {
   }
 
 
-// put axios and set success status, if success then navigate 
-
   const sendUserData = (genre,type,episodes,avgrat,useravgrat) => {
-    axios.post('http://127.0.0.1:5000/findanime',{
+    const senddata = {
       genre:genre,
       type:type,
       episodes:episodes,
       avgrat:avgrat,
       useravgrat:useravgrat
-    }).then((response)=>{
+    }
+    axios.post('http://127.0.0.1:5000/findanime',senddata).then((response)=>{
       if (response.data['status']==='OK'){
         navigate('/findanime',{ state : response.data['userdata'] })
       }

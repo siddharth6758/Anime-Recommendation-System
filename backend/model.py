@@ -27,7 +27,7 @@ nn = NearestNeighbors(n_neighbors=8)
 nn.fit(df_main.iloc[:,1:])
 pkl.dump(nn,open('D:\\AnimeRecommendationSystem\\backend\\recommendationsystem.pkl','wb'))
 pkl.dump(mas,open('D:\\AnimeRecommendationSystem\\backend\\maxabsolutescaler.pkl','wb'))
-
+df_name.to_csv('D:\\AnimeRecommendationSystem\\backend\\dataset\\anime_names.csv')
 # st = '0	1	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	1	0	0	0	0	0	0.000550055	0.953041622	0.892325856'.split('\t')
 # lst = [float(x) for i,x in enumerate(st)]
 # index = nn.kneighbors([lst], return_distance=False)
