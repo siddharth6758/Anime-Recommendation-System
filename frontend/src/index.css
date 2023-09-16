@@ -192,13 +192,6 @@ html {
   color:#ebe9e9;
 }
 /*namesearch ---------------------------------------------------------*/
-#anime-find-body{
-  overflow-y: hidden;
-  height: 97.6vh;
-  background: url('./public/bg-findanime.jpg');
-  background-repeat: no-repeat;
-  background-size: contain;
-}
 #search-form{
   display:block;
   width:50%;
@@ -229,9 +222,16 @@ html {
 }
 
 /*findanime ---------------------------------------------------------*/
+#anime-find-body{
+  overflow-y: hidden;
+  height: 97.6vh;
+  background: url('./public/bg-findanime.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
 #list-animes{
   width: 50%;
-  margin:75px auto;
+  margin:30px auto;
   display: flex;
   flex-wrap: wrap;
 }

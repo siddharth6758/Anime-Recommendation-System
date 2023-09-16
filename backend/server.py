@@ -35,6 +35,7 @@ def animefind():
     index = nn.kneighbors(df_l,return_distance=False)
     for x in index:
         result.append(df_name.loc[x,'name'].values)
+    print(result)
     response = {'status':'OK','userdata':list(result[0])} #response status + anime data
     return jsonify(response)
 

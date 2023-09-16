@@ -41,6 +41,8 @@ function FindAnime() {
     modal.style.display = 'none';
   }
 
+  console.log(animeData)
+
   return (
     <div className="body" id='anime-find-body'>
       <div id='list-animes'>
@@ -53,7 +55,6 @@ function FindAnime() {
             <div className="anime-modal" id={idx+'animemodal'}>
                 <div className="modal-content">
                   <span className="close" onClick={()=>closedescp(idx+'animemodal')}>&times;</span>
-                  <p>
                     <div style={{display:'flex',gap:'15px'}}>
                       <img src={value.data[0].attributes.posterImage.tiny} alt={value}/>
                       <span><b>Title : </b>{value.data[0].attributes.titles[Object.keys(value.data[0].attributes.titles)[0]]}<br/>
@@ -63,7 +64,8 @@ function FindAnime() {
                       <b>Status : </b>{value.data[0].attributes.status}<br/>
                       <b>Type : </b>{value.data[0].attributes.showType}<br/>
                       </span>
-                    </div>
+                    </div><br/>
+                  <p>
                     {value.data[0].attributes.description}
                   </p>
                 </div>
