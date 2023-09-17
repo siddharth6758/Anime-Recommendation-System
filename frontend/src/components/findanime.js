@@ -30,7 +30,7 @@ function FindAnime() {
 
     fetchAnimeData();
   }, [userdata]);
-  
+
   function opendescp(value){
     const modal = document.getElementById(value)
     modal.style.display = 'block';
@@ -41,7 +41,6 @@ function FindAnime() {
     modal.style.display = 'none';
   }
 
-  console.log(animeData)
 
   return (
     <div className="body" id='anime-find-body'>

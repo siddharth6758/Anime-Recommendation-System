@@ -231,7 +231,7 @@ html {
 }
 #list-animes{
   width: 50%;
-  margin:30px auto;
+  margin:45px auto;
   display: flex;
   flex-wrap: wrap;
 }
