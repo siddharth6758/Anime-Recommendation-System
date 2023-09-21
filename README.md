@@ -1,7 +1,7 @@
 # Anime-Recommendation-System
 The Anime Recommendation System is an innovative solution that leverages advanced algorithms and user preferences to suggest tailored anime content. 
-Utilizing ReactJS and Python with Flask integration, this system harnesses the power of the Kitsu API to fetch comprehensive anime data. Users can discover, 
-explore, and bookmark their favorite shows, benefiting from a personalized viewing experience. This project bridges the gap between anime enthusiasts and their 
+Utilizing ReactJS and Python with Flask integration, this system harnesses the power of the Kitsu API to fetch comprehensive anime data. Users can discover and 
+explore their favorite shows, benefiting from a personalized viewing experience. This project bridges the gap between anime enthusiasts and their 
 ideal series, enhancing their entertainment journey.
 
 ![image](https://github.com/siddharth6758/Anime-Recommendation-System/assets/90406492/191baa1d-ffcc-4b8f-a571-71ff3b6ed9d0)
