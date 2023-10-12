@@ -50,7 +50,10 @@ This project provides 2 methods to user to provide input:
 
   ![image](https://github.com/siddharth6758/Anime-Recommendation-System/assets/90406492/7b9b03c4-07ee-4d20-bbc6-5c48f82c2baf)
   
-  ![image](https://github.com/siddharth6758/Anime-Recommendation-System/assets/90406492/9d9dd5be-1cd3-4cb1-a20a-b41de44f9914)
+  ![image](https://github.com/siddharth6758/Anime-Recommendation-System/assets/90406492/6252fa79-f242-4f22-949f-2e86320f9bf0)
+  
+  ![image](https://github.com/siddharth6758/Anime-Recommendation-System/assets/90406492/67afc576-2da5-490c-ae53-f4bb744c7a29)
+
 
 - # Name Search Choice:
   The user needs to only provide the name of the anime on the basis of which it will get recommendations
