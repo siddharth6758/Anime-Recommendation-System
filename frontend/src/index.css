@@ -170,7 +170,7 @@ html {
   border:none;
   font-size:20px;
 }
-#select-type{
+#select-type, #select-rating{
   width: 20vw;
   height: 7.8vh;
   border-radius: 15px;
@@ -178,6 +178,9 @@ html {
   font-size:20px;
 }
 #select-type:focus{
+  outline:none;
+}
+#select-rating:focus{
   outline:none;
 }
 .form-item input[type="text"]:focus{

@@ -23,10 +23,8 @@ def gettime(time_str):
 
 #Preprocessing ----------------------------------------------------------------
 df = df.reset_index(drop=True)
-df = df.drop(columns=['English name','Japanese name','Premiered','Producers','Licensors','Source','Ranked','Members','Favorites', 'Watching', 'Completed', 'On-Hold', 'Dropped','Plan to Watch', 'Score-10', 'Score-9', 'Score-8', 'Score-7', 'Score-6', 'Score-5', 'Score-4', 'Score-3', 'Score-2', 'Score-1'])
+df = df.drop(columns=['English name','Japanese name','Studios','Premiered','Producers','Licensors','Source','Ranked','Members','Favorites', 'Watching', 'Completed', 'On-Hold', 'Dropped','Plan to Watch', 'Score-10', 'Score-9', 'Score-8', 'Score-7', 'Score-6', 'Score-5', 'Score-4', 'Score-3', 'Score-2', 'Score-1'])
 df = df[df['Type'] != 'Unknown']
-df_studios = {name:idx for idx,name in zip(range(len(df['Studios'].unique())),df['Studios'].unique())}
-df['Studios'] = df['Studios'].map(df_studios)
 df['Aired'] = df['Aired'].str.split(' to ').str[0].str.split(',').str[-1]
 df['Aired'] = df['Aired'].replace('Unknown',df['Aired'].mode()[0])
 df['Aired'] = pd.to_numeric(df['Aired'])
@@ -43,7 +41,7 @@ df['Score'] = df['Score'].replace('Unknown',dft['Score'].median())
 df_type = df['Type'].str.get_dummies(' ')
 df_type = df_type.rename(columns={'Music':'music'})
 df_genre = df['Genres'].str.get_dummies(', ')
-df_main = pd.concat([df_genre,df_type,df['Episodes'],df['Score'],df['Studios'],df['Aired'],df['Duration'],df['Rating'],df['Popularity']],axis=1)
+df_main = pd.concat([df_genre,df_type,df['Episodes'],df['Score'],df['Aired'],df['Duration'],df['Rating'],df['Popularity']],axis=1)
 df_name = pd.DataFrame(columns=['Name'])
 df_name['Name'] = df['Name']
 
@@ -52,14 +50,14 @@ mas.fit(df_main.iloc[:,:].values)
 df_main.iloc[:,:] = mas.transform(df_main.iloc[:,:].values)
 
 # #Nearest Neigbor model
-nn = NearestNeighbors(n_neighbors=10)
+nn = NearestNeighbors(n_neighbors=8)
 nn.fit(df_main.iloc[:,:])
 pkl.dump(nn,open('D:\\AnimeRecommendationSystem\\backend\\recommendationsystem.pkl','wb'))
 pkl.dump(mas,open('D:\\AnimeRecommendationSystem\\backend\\maxabsolutescaler.pkl','wb'))
 # df_main.to_csv('D:\\AnimeRecommendationSystem\\backend\\dataset\\anime_dataset.csv')
 # df_name.to_csv('D:\\AnimeRecommendationSystem\\backend\\dataset\\anime_names.csv')
 
-# st = '1	1	0	1	0	0	1	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	1	0.351651946	0.927094668	0.00275989	0.988625124	0.143884892	0.2	0.001764873'.split('\t')
+# st = '1	1	0	1	0	0	1	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	1	0.351651946	0.927094668	0.988625124	0.143884892	0.2	0.001764873'.split('\t')
 # lst = [float(x) for x in st]
 # print(len(lst))
 # # index2 = nn.radius_neighbors([lst],radius=1.2,return_distance=False)
