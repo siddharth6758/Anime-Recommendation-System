@@ -7,14 +7,32 @@ ideal series, enhancing their entertainment journey.
 ![image](https://github.com/siddharth6758/Anime-Recommendation-System/assets/90406492/191baa1d-ffcc-4b8f-a571-71ff3b6ed9d0)
 
 # Dataset
-The dataset contains 7 columns namely:
-- Anime Id : Contains unique id alloted to an anime.
-- Type : Whether the anime is a TV show, Movie etc.
+The dataset covers 17,500+ animes and contains the following data for each anime:
+- Id : Contains unique id alloted to an anime according to [**MAL**](https://myanimelist.net/).
 - Name : Name/Title of the anime.
-- Average Rating : Average rating of sources.
+- Score : Rating of the anime as per MAL.
+- Genres : List of genres the anime belongs to.
+- English Name : Name of anime in English.
+- Japanese Name : Name of anime in Japanese.
+- Type : Whether the anime is a TV show, Movie etc.
 - Episodes : Number of episodes.
-- Genre : List of genres the anime belongs to.
+- Aired : Broadcasting date.
+- Premiered : Season of premiere.
+- Producers : Producers of the anime.
+- Licensors : Organizations who grant local distributors the rights to localize and distribute anime in a particular market.
+- Studios : Organizations for creating the animation from source.
+- Source : Reference/Origin of the anime.
+- Duration : Duration of each episode.
+- Rating : Age Rate.
+- Ranked : Position based in the score.
+- Popularity : Position based in the the number of users who have added the anime to their list.
 - Members : Community size related to the anime.
+- Favorites : Number of users who have the anime as "favorites".
+- Watching : Number of users who are watching the anime.
+- Completed : Number of users who have complete the anime.
+- On-Hold : Number of users who have the anime on Hold.
+- Dropped : Number of users who have dropped the anime.
+- Plan to Watch : Number of users who plan to watch the anime.
 
 The Dataset has been cleaned and unnecessary columns has been removed, missing values have been filled/removed.
 
