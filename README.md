@@ -34,6 +34,7 @@ The dataset covers 17,500+ animes and contains the following data for each anime
 - Dropped : Number of users who have dropped the anime.
 - Plan to Watch : Number of users who plan to watch the anime.
 
+Dataset has been taked from [**Kaggle**](https://www.kaggle.com/datasets/hernan4444/anime-recommendation-database-2020).
 The Dataset has been cleaned and unnecessary columns has been removed, missing values have been filled/removed.
 
 # FrontEnd - ReactJs
